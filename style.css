@@ -1,0 +1,105 @@
+/* ===== Body & Centering ===== */
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* ===== Calculator Container ===== */
+  .calculator {
+    background-color: #1e1e2f; /* Dark background */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    width: 360px; /* Wider to fit scientific buttons */
+  }
+  
+  /* ===== Display Screen ===== */
+  #display {
+    width: 100%;
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: right;
+    background: #2c2c3e;
+    color: rgb(163, 162, 162);
+    margin-bottom: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* ===== Buttons Grid ===== */
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 columns for scientific layout */
+    gap: 10px;
+  }
+  
+  /* ===== All Buttons ===== */
+  .btn {
+    padding: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    background: #3a3a55;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .btn:hover {
+    background: #50506e;
+    transform: scale(1.05);
+  }
+  
+  /* ===== Operator Buttons ===== */
+  .btn.equal {
+    background: #4caf50;
+    grid-column: span 3;
+  }
+  
+  .btn.equal:hover {
+    background: #45a049;
+  }
+
+  .btn.sign {
+    background-color: #6c63ff;
+  }
+  
+  .btn.sign:hover {
+    background-color: #574bff;
+  }
+  
+  /* ===== Special Function Buttons (√, x², sin, cos, etc.) ===== */
+  .btn.sqrt, .btn.log, .btn.sin, .btn.cos, .btn.tan, .btn.pi, .btn.power {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  .btn.sqrt:hover, .btn.log:hover, .btn.sin:hover, .btn.cos:hover, .btn.tan:hover, .btn.pi:hover, .btn.power:hover {
+    background-color: #e68900;
+  }
+  
+  /* ===== Zero Button ===== */
+  .zero {
+    grid-column: span 2; /* Make 0 wider */
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 500px) {
+    .calculator {
+      width: 95%;
+    }
+    #display {
+      font-size: 1.2em;
+      height: 50px;
+    }
+    .btn {
+      padding: 12px;
+      font-size: 0.9em;
+    }
+  }
